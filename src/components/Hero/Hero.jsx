@@ -84,15 +84,15 @@ const Hero = () => {
             <div className='space-y-4 text-center md:text-left'>
                 <AnimatePresence mode="wait">
                     <UpdateFollower mouseOptions={{backgroundColor: "white", zIndex: 9999, followSpeed: 0.5, rotate: -720, mixBlendMode: "difference", scale: 10}}>
-                        <motion.h1 key={activeData.id} variants={fadeUp(0.2)} initial="hidden" animate="show" exit="exit" className='text-3xl lg:text-6xl font-bold font-varela'>{activeData.title}</motion.h1>
+                        <motion.h1 key={activeData.id} variants={fadeUp(0.2)} initial="hidden" animate="show" exit="exit" className=' mr-20 mb-1 text-3xl lg:text-6xl font-bold font-varela'>{activeData.title}</motion.h1>
                     </UpdateFollower>
                 </AnimatePresence>
                 <AnimatePresence mode="wait">
-                    <motion.p key={activeData.id} variants={fadeUp(0.3)} initial="hidden" animate="show" exit="exit" className='text-sm leading-loose text-white/80'>{activeData.subtitle}</motion.p>
+                    <motion.p key={activeData.id} variants={fadeUp(0.3)} initial="hidden" animate="show" exit="exit" className=' mr-20 text-base leading-loose text-white/80'>{activeData.subtitle}</motion.p>
                 </AnimatePresence>
                 <AnimatePresence mode="wait">
                     <UpdateFollower mouseOptions={{backgroundColor: activeData.bgColor, zIndex: 9999, followSpeed: 0.5, rotate: -720, mixBlendMode: "difference", scale: 6, backgroundElement: <div><img src={activeData.image} /></div>}}>
-                        <motion.button key={activeData.id} variants={fadeUp(0.3)} initial="hidden" animate="show" exit="exit" style={{backgroundColor: activeData.bgColor}} className='px-4 py-2 inline-block font-normal rounded-sm'>Buy and Listen</motion.button>
+                        <motion.button key={activeData.id} variants={fadeUp(0.3)} initial="hidden" animate="show" exit="exit" style={{backgroundColor: activeData.bgColor}} className='px-6 py-4 inline-block font-normal rounded-sm'>Buy and Listen</motion.button>
                     </UpdateFollower>  
                 </AnimatePresence>
 
@@ -107,7 +107,7 @@ const Hero = () => {
                     {headphoneData.map((item) => {
                         return (
                             <UpdateFollower 
-                                key={item.id}
+                            key={item.id}
                                 mouseOptions={{
                                     backgroundColor: item.bgColor,
                                     zIndex: 9999,
